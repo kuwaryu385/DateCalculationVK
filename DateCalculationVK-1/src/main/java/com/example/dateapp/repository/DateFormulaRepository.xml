@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dateapp.mapper.DateFormulaRepository">
+
+
+<!--日付計算式の一覧を表示 -->
+ 	<select id="selectAll" resultType="com.example.dateapp.repository.DateFormulaRepository">
+		SELECT * FROM dateformula ORDER BY dateId DESC";
+ 	</select>
+
+
+<!--IDを選択して日付計算式を取得 -->
+	<!--<select id="selectOne" resultType="com.example.dateapp.repository.DateFormulaRepository">
+   	 	SELECT * FROM dateformula WHERE dateId = #{dateId}
+	</select>-->
+
+
+<!-- 新しい計算式を登録 -->
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO dateformula
+		VALUES(#{dateId}, #{dateName}, #{adjustmentYear}, #{adjustmentMonth}, #{adjustmentDay})")
+ 	</insert>-->
+
+
+<!--登録した計算式を変更 -->
+ 	<!--<update id="update">
+		UPDATE dateformula
+		SET dateName = #{dateName},  adjustmentYear = #{adjustmentYear}, adjustmentMonth = #{adjustmentMonth}, adjustmentDay = #{adjustmentDay}
+		WHERE dateId = #{dateId}")
+ 	</update>-->
+
+
+<!--登録された計算式を削除 -->
+	<!--<delete id="delete">
+    	DELETE FROM dateformula WHERE dateId = #{dateId}
+	</delete>-->
+
+</mapper>
