@@ -1,19 +1,26 @@
 package com.example.dateapp.controller;
 
-//revartのてすと
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-//import com.example.firstcrudapp.domein.MyBooksModel;
-//import com.example.firstcrudapp.service.MyBooksService;
+//import com.example.dateapp.service.CalculationService;
+/**
+ * 日付計算処理をシュミレートするHOME画面に紐づくコントローラー
+ * @author kuwamura
+ *
+ */
 
 @Controller
-@RequestMapping("/") //Home画面の表示
-public class HomeController {
+@RequestMapping
+public class SimulationHomeController {
 
-	//テーブル一覧画面の表示　ReadAll処理
+	//	@Autowired
+	//	private CalculationService.service;
+
+	//Home画面の表示
 	@GetMapping
 	public String Home(Model model) {
 		return "home";
@@ -66,7 +73,7 @@ public class HomeController {
 	//			}
 	//		}
 
-	//本の情報削除します
+	//登録された計算式を削除します
 	//		@DeleteMapping("{id}")
 	//		public String delete(@PathVariable Integer id) {
 	//			myBooksService.delete(id);
