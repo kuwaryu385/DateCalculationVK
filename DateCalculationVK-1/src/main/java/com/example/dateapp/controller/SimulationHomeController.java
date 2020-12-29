@@ -26,21 +26,6 @@ public class SimulationHomeController {
 		return "home";
 	}
 
-	//		//本のIDにて、本の内容を取得
-	//		@GetMapping("{id}")
-	//		public String show(@PathVariable Integer id, Model model) {
-	//			model.addAttribute("mybook", myBooksService.selectOne(id));
-	//			return "show";
-	//		}
-
-	//	新規作成画面の表示
-	@GetMapping("create")
-	public String Create(Model model) {
-		//		MyBooksModel mybooks = new MyBooksModel();
-		//		model.addAttribute("myBook", mybooks);
-		return "create";
-	}
-
 	//変更画面の表示
 	//		@GetMapping("{id}/edit")
 	//		public String edit(@PathVariable Integer id, @ModelAttribute("mybook") MyBooksModel myBooksModel, Model model) {
