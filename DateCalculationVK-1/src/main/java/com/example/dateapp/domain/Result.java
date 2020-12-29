@@ -42,7 +42,7 @@ public class Result {
 
 	/**
 	 * 計算結果の取得
-	 * @return
+	 * @return 計算結果
 	 */
 
 	public String getCalculated() {
