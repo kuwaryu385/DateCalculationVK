@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.dateapp.mapper.DateFormulaRepository">
+<mapper namespace="com.example.dateapp.repository.DateFormulaRepository">
 
 
 <!--日付計算式の一覧を表示 -->
- 	<select id="selectAll" resultType="com.example.dateapp.repository.DateFormulaRepository">
-		SELECT * FROM dateformula ORDER BY dateId DESC";
+ 	<select id="select" resultType="com.example.dateapp.domain.DateFormula">
+		SELECT * FROM dateformula ORDER BY dateId ASC;
  	</select>
 
 
 <!--IDを選択して日付計算式を取得 -->
-	<!--<select id="selectOne" resultType="com.example.dateapp.repository.DateFormulaRepository">
+	<select id="selectId" resultType="com.example.dateapp.domain.DateFormula">
    	 	SELECT * FROM dateformula WHERE dateId = #{dateId}
-	</select>-->
+	</select>
 
 
 <!-- 新しい計算式を登録 -->
@@ -32,8 +32,8 @@
 
 
 <!--登録された計算式を削除 -->
-	<!--<delete id="delete">
+	<delete id="delete">
     	DELETE FROM dateformula WHERE dateId = #{dateId}
-	</delete>-->
+	</delete>
 
 </mapper>

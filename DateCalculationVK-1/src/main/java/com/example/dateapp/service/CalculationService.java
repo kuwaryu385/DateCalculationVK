@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.dateapp.domain.DateFormula;
 import com.example.dateapp.repository.DateFormulaRepository;
@@ -28,7 +29,7 @@ public class CalculationService {
 	//@return 日付計算式
 
 	public DateFormula search(String dateId) {
-		return repository.selectID(dateId);
+		return repository.selectId(dateId);
 	}
 
 	//日付計算式を登録します。
@@ -43,11 +44,15 @@ public class CalculationService {
 	//		repository.update(formula);
 	//	}
 
-	//日付計算式を削除します。
+	/**
+	 * 日付計算式を削除します。
+	 * @param dateId 削除対象の日付ID
+	 */
 
-	//	public void delete(String dateId) {
-	//		repository.delete(dateId);
-	//	}
+	@Transactional
+	public void delete(String dateId) {
+		repository.delete(dateId);
+	}
 
 	/**
 	 * 日付計算を実行するクラス

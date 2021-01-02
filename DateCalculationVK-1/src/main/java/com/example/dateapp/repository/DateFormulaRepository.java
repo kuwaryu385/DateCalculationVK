@@ -15,7 +15,7 @@ public interface DateFormulaRepository {
 
 	//	 日付計算式を取得する
 
-	DateFormula selectID(String dateId);
+	DateFormula selectId(String dateId);
 
 	//	日付計算式を新規登録する
 
