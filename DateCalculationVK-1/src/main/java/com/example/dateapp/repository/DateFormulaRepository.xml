@@ -17,18 +17,18 @@
 
 
 <!-- 新しい計算式を登録 -->
-	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO dateformula
-		VALUES(#{dateId}, #{dateName}, #{adjustmentYear}, #{adjustmentMonth}, #{adjustmentDay})")
- 	</insert>-->
+		VALUES(#{dateId}, #{dateName}, #{adjustmentYear}, #{adjustmentMonth}, #{adjustmentDay})
+ 	</insert>
 
 
-<!--登録した計算式を変更 -->
- 	<!--<update id="update">
+<!--登録した計算式を更新 -->
+ 	<update id="update">
 		UPDATE dateformula
 		SET dateName = #{dateName},  adjustmentYear = #{adjustmentYear}, adjustmentMonth = #{adjustmentMonth}, adjustmentDay = #{adjustmentDay}
 		WHERE dateId = #{dateId}")
- 	</update>-->
+ 	</update>
 
 
 <!--登録された計算式を削除 -->
