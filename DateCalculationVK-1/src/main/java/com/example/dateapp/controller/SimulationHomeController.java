@@ -95,6 +95,12 @@ public class SimulationHomeController {
 	//				return "redirect:/";
 	//			}
 	//		}
+	/**
+	 * 指定した計算式の削除
+	 * @param 画面フォーム
+	 * @param model
+	 * @return 初期画面へ
+	 */
 
 	@PostMapping(value = "/{dateId}")
 	public String delete(@PathVariable String dateId, Model model) {

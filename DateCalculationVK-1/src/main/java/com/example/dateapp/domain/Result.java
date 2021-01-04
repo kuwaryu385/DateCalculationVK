@@ -24,7 +24,7 @@ public class Result {
 
 	/**	{@link DateFormula#getDateId()}*/
 	public String getDateId() {
-		return formula.getDateName();
+		return formula.getDateId();
 	}
 
 	/** {@link DateFormula#getDateName()} */

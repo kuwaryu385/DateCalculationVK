@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
@@ -14,70 +13,64 @@
 
 <body>
 <nav class="navbar navbar-inverse">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand">Create 新規登録</a>
-      </div>
-    </div>
-    </nav>
-    <div class="container">
-    <div class="card card-primary mb-3">
-          <div class="card-header">
-            <h5 class="card-title">計算式を登録</h5>
-          </div>
-        <div class="card-body">
-              <form th:method="post" th:action="@{/}">
-                <div class="form-group row">
-                    <label class="col-md-2 control-label">日付ID</label>
-                    <div class="col-md-10">
-                      <input class="form-control" type="text" name="title" th:value="*{title}" />
-                      <!-- <div class="text-danger" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div> -->
-                    </div>
-                </div>
+	<div class="container">
+  		<div class="navbar-header">
+    		<a class="navbar-brand">Create 新規登録</a>
+  		</div>
+	</div>
+</nav>
 
-                <div class="form-group row">
-                    <label class="col-md-2 control-label">日付名</label>
-                    <div class="col-md-10">
-                      <input class="form-control" type="text" name="author" th:value="*{author}"/>
-                      <!-- <div class="text-danger" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></div> -->
-                    </div>
-                </div>
+<div class="container">
+	<div class="card card-primary mb-3">
+  	<div class="card-header">
+    	<h5 class="card-title">計算式を登録</h5>
+  	</div>
+<div class="card-body">
+	<form action="#" th:action="@{/create}" th:method="post" >
+		<div class="form-group row">
+        	<label class="col-md-2 control-label">日付ID</label>
+			<div class="col-md-10">
+				<input id="dateId" class="form-control" type="text" placeholder="Y10" th:field="${dateFormula.dateId}"/>
+				<p class="text-danger" th:if="${#fields.hasErrors('dateFormula.dateId')}" th:errors="${dateFormula.dateId}" />
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 control-label">日付名</label>
+			<div class="col-md-10">
+				<input id="dateName" class="form-control" type="text" placeholder="10年後" th:field="${dateFormula.dateName}"/>
+			<p class="text-danger" th:if="${#fields.hasErrors('dateFormula.dateName')}" th:errors="${dateFormula.dateName}" />
+			</div>
+		</div>
 
-                <div class="form-group row">
-                    <label class="col-md-2 control-label">加減値（年）</label>
-                    <div class="col-md-10">
-                      <input class="form-control" type="text" name="author" th:value="*{author}"/>
-                     <!--  <div class="text-danger" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></div> -->
-                    </div>
-                </div>
+		<div class="form-group row">
+			<label class="col-md-2 control-label">加減値（年）</label>
+			<div class="col-md-10">
+				<input id="djustmentYear" class="form-control" type="text" placeholder="10" th:field="${dateFormula.adjustmentYear}"/>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 control-label">加減値（月）</label>
+			<div class="col-md-10">
+				<input id="adjustmentMonth" class="form-control" type="text" placeholder="0" th:field="${dateFormula.adjustmentMonth}"/>
+			</div>
+		</div>
 
-                <div class="form-group row">
-                    <label class="col-md-2 control-label">加減値（月）</label>
-                    <div class="col-md-10">
-                      <input class="form-control" type="text" name="author" th:value="*{author}"/>
-                      <!-- <div class="text-danger" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></div> -->
-                    </div>
-                </div>
+		<div class="form-group row">
+			<label class="col-md-2 control-label">加減値（日）</label>
+			<div class="col-md-10">
+				<input id="adjustmentDay" class="form-control" type="text" placeholder="0" th:field="${dateFormula.adjustmentDay}"/>
+			</div>
+		</div>
 
-                <div class="form-group row">
-                    <label class="col-md-2 control-label">加減値（日）</label>
-                    <div class="col-md-10">
-                      <input class="form-control" type="text" name="author" th:value="*{author}"/>
-                     <!--  <div class="text-danger" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></div> -->
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="offset-md-2 col-md-10">
-                      <button class="btn btn-primary">新規登録</button>
-                    </div>
-                </div>
-
-                <a id="backButton" class="btn btn-primary" href="/">戻る</a>
-
-            </form>
-        </div>
-      </div>
-    </div>
+		<div class="form-group row">
+			<div class="offset-md-2 col-md-10">
+ 				<button id="createButton" name="create" class="btn btn-primary">新規登録</button>
+			</div>
+		</div>
+		<a id="backButton" class="btn btn-primary" href="/">戻る</a>
+	</form>
+	</div>
+	</div>
+</div>
 </body>
 </html>

@@ -32,11 +32,14 @@ public class CalculationService {
 		return repository.selectId(dateId);
 	}
 
-	//日付計算式を登録します。
-
-	//	public void register(DateFormula formula) {
-	//		repository.insert(formula);
-	//	}
+	/**
+	 * 新しい計算式を登録します
+	 * @param formula
+	 */
+	@Transactional
+	public void create(DateFormula formula) {
+		repository.insert(formula);
+	}
 
 	//日付計算式を更新します。
 

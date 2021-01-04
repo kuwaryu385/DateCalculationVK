@@ -33,7 +33,7 @@
 				<form action="#" th:method="post" th:action="@{/}">
 					<div class="form-group row justify-content-center">
 						<div class="col-md-7 ">
-							<input id="baseDate" class="form-control" type="text"placeholder="20181101" th:field="${simulationForm.baseDate}">
+							<input id="baseDate" class="form-control" type="text" placeholder="20181101" th:field="${simulationForm.baseDate}">
 							<p class="uk-text-danger" th:if="${#fields.hasErrors('simulationForm.baseDate')}" th:errors="${simulationForm.baseDate}" />
 						</div>
 					</div>
@@ -59,6 +59,7 @@
 						<th>編集</th>
 					</tr>
 				</thead>
+
 				<tbody th:remove="all-but-first" th:each="dateFormula, stat : ${results}">
 					<tr>
 						<td th:text="${stat.count}">1</td>
