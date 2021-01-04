@@ -41,11 +41,14 @@ public class CalculationService {
 		repository.insert(formula);
 	}
 
-	//日付計算式を更新します。
-
-	//	public void update(DateFormula formula) {
-	//		repository.update(formula);
-	//	}
+	/**
+	 * 日付計算式を更新します。
+	 * @param formula
+	 */
+	@Transactional
+	public void update(DateFormula formula) {
+		repository.update(formula);
+	}
 
 	/**
 	 * 日付計算式を削除します。
