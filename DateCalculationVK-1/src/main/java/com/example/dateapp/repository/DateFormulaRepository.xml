@@ -27,7 +27,7 @@
  	<update id="update">
 		UPDATE dateformula
 		SET dateName = #{dateName},  adjustmentYear = #{adjustmentYear}, adjustmentMonth = #{adjustmentMonth}, adjustmentDay = #{adjustmentDay}
-		WHERE dateId = #{dateId}")
+		WHERE dateId = #{dateId}
  	</update>
 
 
