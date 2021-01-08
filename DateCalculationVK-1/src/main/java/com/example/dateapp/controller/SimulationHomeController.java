@@ -64,37 +64,6 @@ public class SimulationHomeController {
 		return "home";
 	}
 
-	//変更画面の表示
-	//		@GetMapping("{id}/edit")
-	//		public String edit(@PathVariable Integer id, @ModelAttribute("mybook") MyBooksModel myBooksModel, Model model) {
-	//			model.addAttribute("mybook", myBooksService.selectOne(id));
-	//			return "edit";
-	//		}
-
-	//新規作成画面の挿入処理　エラーで戻り、成功したら一覧へ画面遷移
-	//		@PostMapping
-	//		public String postBooksCreate(@ModelAttribute("mybook") @Validated MyBooksModel myBooksModel,
-	//				BindingResult bindingResult) {
-	//			if (bindingResult.hasErrors()) {
-	//				return "new";
-	//			}
-	//			myBooksService.insert(myBooksModel);
-	//			return "redirect:/";
-	//		}
-
-	//登録情報を更新画面へ　入力なければ、エラー出て戻り、更新したら一覧画面へ値が更新されて戻る
-	//		@PutMapping("{id}") //POSTでもいけるかもです
-	//		public String updateBooks(@PathVariable Integer id, @ModelAttribute("mybook") @Validated MyBooksModel myBooksModel,
-	//				BindingResult bindingResult, Model model) {
-	//			if (bindingResult.hasErrors()) {
-	//				model.addAttribute("mybook", myBooksModel);
-	//				return "edit";
-	//			} else {
-	//				myBooksModel.setId(id);
-	//				myBooksService.update(myBooksModel);
-	//				return "redirect:/";
-	//			}
-	//		}
 	/**
 	 * 指定した計算式の削除
 	 * @param 画面フォーム

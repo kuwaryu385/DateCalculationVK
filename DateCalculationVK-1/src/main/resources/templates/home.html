@@ -34,7 +34,7 @@
 					<div class="form-group row justify-content-center">
 						<div class="col-md-7 ">
 							<input id="baseDate" class="form-control" type="text" placeholder="20181101" th:field="${simulationForm.baseDate}">
-							<p class="uk-text-danger" th:if="${#fields.hasErrors('simulationForm.baseDate')}" th:errors="${simulationForm.baseDate}" />
+							<p class="text-danger" th:if="${#fields.hasErrors('simulationForm.baseDate')}" th:errors="${simulationForm.baseDate}" />
 						</div>
 					</div>
 
@@ -42,7 +42,7 @@
 						<div class="offset-md-2 col-md-8">
 							<button id="simulationButton" name="simulation"class="btn btn-success">計算実行</button>
 							<a id="createButton" class="btn btn-primary" href="create">新規登録</a>
-							<a id="createButton" class="btn btn-info" href="list">計算式一覧</a>
+							<a id="listButton" class="btn btn-info" href="list">計算式一覧</a>
 						</div>
 					</div>
 				</form>

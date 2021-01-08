@@ -45,20 +45,23 @@
 		<div class="form-group row">
 			<label class="col-md-2 control-label">加減値（年）</label>
 			<div class="col-md-10">
-				<input id="djustmentYear" class="form-control" type="text" placeholder="10" th:field="${dateFormula.adjustmentYear}"/>
+				<input id="djustmentYear" class="form-control" type="number" placeholder="10" th:field="${dateFormula.adjustmentYear}" required/>
+
 			</div>
 		</div>
 		<div class="form-group row">
 			<label class="col-md-2 control-label">加減値（月）</label>
 			<div class="col-md-10">
-				<input id="adjustmentMonth" class="form-control" type="text" placeholder="0" th:field="${dateFormula.adjustmentMonth}"/>
+				<input id="adjustmentMonth" class="form-control" type="number" placeholder="0" th:field="${dateFormula.adjustmentMonth}" required/>
+				<p class="text-danger" th:if="${#fields.hasErrors('dateFormula.adjustmentMonth')}" th:errors="${dateFormula.adjustmentMonth}"/>
 			</div>
 		</div>
 
 		<div class="form-group row">
 			<label class="col-md-2 control-label">加減値（日）</label>
 			<div class="col-md-10">
-				<input id="adjustmentDay" class="form-control" type="text" placeholder="0" th:field="${dateFormula.adjustmentDay}"/>
+				<input id="adjustmentDay" class="form-control" type="number" placeholder="0" th:field="${dateFormula.adjustmentDay}" required/>
+				<p class="text-danger" th:if="${#fields.hasErrors('dateFormula.adjustmentDay')}" th:errors="${dateFormula.adjustmentDay}" />
 			</div>
 		</div>
 
