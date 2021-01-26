@@ -17,7 +17,7 @@
 
 
 <!-- 新しい計算式を登録 -->
-	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	<insert id="insert" >
 		INSERT INTO dateformula
 		VALUES(#{dateId}, #{dateName}, #{adjustmentYear}, #{adjustmentMonth}, #{adjustmentDay})
  	</insert>
