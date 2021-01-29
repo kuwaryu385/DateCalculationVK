@@ -22,10 +22,9 @@ import com.example.dateapp.service.CalculationService;
  * @author kuwamura
  *
  */
-
 @Controller
 @RequestMapping
-public class SimulationHomeController {
+class SimulationHomeController {
 
 	@Autowired
 	private CalculationService service;
@@ -37,7 +36,7 @@ public class SimulationHomeController {
 	 */
 
 	@GetMapping
-	public String Home(@ModelAttribute SimulationForm form) {
+	public String index(@ModelAttribute SimulationForm form) {
 		return "home";
 	}
 
