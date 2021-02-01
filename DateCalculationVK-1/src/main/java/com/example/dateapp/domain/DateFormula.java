@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 public class DateFormula {
 	/**日付ID*/
 	@NotBlank
-	@Size(min = 1, max = 8)
+	@Size(min = 1, max = 6)
 	private String dateId;
 	/**日付名*/
 	@NotBlank

@@ -30,7 +30,7 @@
 				<h5 class="card-title">計算したい日付を入力してください</h5>
 			</div>
 			<div class="card-body">
-				<form action="#" th:method="post" th:action="@{/}">
+				<form action="/" th:action="@{/}" th:method="post" >
 					<div class="form-group row justify-content-center">
 						<div class="col-md-7 ">
 							<input id="baseDate" class="form-control" type="text" placeholder="20181101" th:field="${simulationForm.baseDate}">
@@ -69,7 +69,7 @@
 						<td th:id="${stat.count} + '_ymdFormula'" th:text="${dateFormula.ymdFormula}">0/1/99</td>
 						<td>
 							<a th:id="${stat.count} + '_updateButton'" class= "btn btn-primary" th:href="@{/update/{dateId}(dateId=${dateFormula.dateId})}">更新</a>
-							<form action="#" th:action="@{/{dateId}(dateId=${dateFormula.dateId})}" method="post">
+							<form action="#" th:action="@{/{dateId}(dateId=${dateFormula.dateId})}" th:method="post">
 								<button th:id="${stat.count} + '_deleteButton'" name="delete" class= "btn btn-secondary">削除</button>
 							</form>
 						</td>

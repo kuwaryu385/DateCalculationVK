@@ -63,7 +63,7 @@ public class CalculationService {
 	/**
 	 * 日付計算を実行するクラス
 	 * 計算基準日をベースに、日付計算式の加減値に基づいて計算を行う。
-	 * 計算語の書式は「yyyyMMdd」の文字列となります。
+	 * 計算後の書式は「yyyyMMdd」の文字列となります。
 	 * @param baseDate 計算基準日
 	 * @param formula 日付計算式
 	 * @return 計算結果
