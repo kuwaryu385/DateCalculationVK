@@ -1,18 +1,33 @@
+buildscript {
+	ext {
+		springBootVersion = '2.4.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+
 plugins {
 	id 'org.springframework.boot' version '2.4.1'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'eclipse-wtp'
 	id 'java'
 	id 'war'
+	id 'application'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+
+bootJar {
+  baseName = "DateCalculationVK-1"
+  version =  "0.0.1-SNAPSHOT"
 }
 
 repositories {
@@ -35,6 +50,8 @@ dependencies {
 	runtimeOnly ('mysql:mysql-connector-java')
     runtimeOnly ('com.h2database:h2')
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    //これはローカル環境での実行時には組み込み Tomcat が使われるが、providedRuntime を指定することで
+    // war ファイル生成時には組み込み Tomcat を含めない設定になっている。
 
     testImplementation('org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.1.3')
 	testImplementation ('org.springframework.boot:spring-boot-starter-test'){
@@ -46,4 +63,8 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+	include 'com.example.dateapp/controller/*'
+	include 'com.example.dateapp/repository/*'
+	include 'com.example.dateapp/service/*'
+	exclude 'com.example.dateapp/view/*'
 }
