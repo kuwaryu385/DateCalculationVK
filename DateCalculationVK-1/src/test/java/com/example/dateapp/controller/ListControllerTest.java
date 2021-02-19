@@ -19,6 +19,7 @@ import com.example.dateapp.service.CalculationService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+
 @TestPropertySource(locations = "classpath:test.properties")
 public class ListControllerTest {
 
