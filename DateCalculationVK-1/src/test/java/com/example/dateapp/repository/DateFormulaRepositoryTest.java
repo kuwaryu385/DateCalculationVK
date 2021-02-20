@@ -18,6 +18,7 @@ import com.example.dateapp.domain.DateFormula;
 @RunWith(SpringRunner.class)
 @MybatisTest
 @TestPropertySource(locations = "classpath:test.properties")
+
 public class DateFormulaRepositoryTest {
 
 	@Autowired
