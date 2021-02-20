@@ -1,4 +1,5 @@
-*.DateCalculationVK-1
+/FolderName
+/DateCalculationVK-1
 HELP.md
 .gradle
 build/
